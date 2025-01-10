@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Rubik+Vinyl&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lobster", serif;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.arrow-up {
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: #2E073F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    /* font-size: 30px; */
+}
+
+.arrow-up>i {
+    font-size: 30px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2E073F;
+    color: white;
+    height: 100px;
+    padding: 0 30px 0 30px;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+header>h1 {
+    font-family: "Rubik Vinyl", serif;
+    font-weight: 400;
+    font-style: normal;
+    animation: text-top-animation 1s ease-out 0.3s 1 normal forwards;
+    opacity: 0;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    display: inline-block;
+}
+
+.home {
+    animation: text-top-animation 1s ease-out 1.3s 1 normal forwards;
+    opacity: 0;
+}
+
+.about {
+    animation: text-top-animation 1s ease-out 2s 1 normal forwards;
+    opacity: 0;
+}
+
+.skills {
+    animation: text-top-animation 1s ease-out 2.7s 1 normal forwards;
+    opacity: 0;
+}
+
+.achievement {
+    animation: text-top-animation 1s ease-out 3.4s 1 normal forwards;
+    opacity: 0;
+}
+
+.contact {
+    animation: text-top-animation 1s ease-out 4.1s 1 normal forwards;
+    opacity: 0;
+}
+
+#about-me {
+    padding: 100px 30px 0px 30px;
+    min-height: 100vh;
+    /* border: 2px solid red;  */
+}
+
+#about-me>h1 {
+    animation: text-top-animation 1s ease-out 1s 1 normal forwards;
+    opacity: 0;
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 30px;
+    margin: 50px 0px;
+    color: #2E073F;
+    animation: text-top-animation linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 30%;
+}
+
+.about-me-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    color:
+        #7A1CAC;
+}
+
+.about-me-container>img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 10px solid #2E073F;
+    animation: left-animation 1s ease-out 1.8s 1 normal forwards;
+    opacity: 0;
+}
+
+.about-me-container>p {
+    animation: right-animation 1s ease-out 1.8s 1 normal forwards;
+    opacity: 0;
+}
+
+#skills {
+    /* border: 10px solid blue; */
+    padding: 100px 30px 0px 30px;
+    color: green;
+    min-height: 100vh;
+}
+
+.cards-container {
+    /* border: 10px solid red; */
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+fieldset {
+    width: 400px;
+    padding: 15px;
+    border: none;
+    box-shadow: 5px 5px 10px rgb(186, 175, 175);
+    border-radius: 10px;
+    color: #7A1CAC;
+    animation: card-animation linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+legend {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 800;
+    color: #2E073F;
+}
+
+#achievements {
+    padding: 100px 30px 0px 30px;
+    min-height: 100vh;
+}
+
+#contact {
+    /* border: 2px solid red; */
+    padding: 100px 30px 0px 30px;
+    min-height: 100vh;
+}
+
+.form-container {
+    /* border: 2px solid blue; */
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    /* border: 2px solid purple; */
+    width: 700px;
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgb(186, 175, 175);
+    border-radius: 10px;
+    animation: card-animation linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+input {
+    width: 95%;
+    height: 40px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+label {
+    margin: 10px 0;
+    color: #2E073F;
+}
+
+button {
+    padding: 5px 7px;
+    background-color: #2E073F;
+    border-radius: 5px;
+    border: none;
+    color: white;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+footer>p {
+    text-align: center;
+    margin: 10px 0;
+}
+
+i {
+    font-size: 30px;
+}
+
+footer {
+    background-color: #2E073F;
+    padding: 30px;
+    color: white;
+}
+
+@keyframes text-top-animation {
+    from {
+        transform: translate(0, -50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes left-animation {
+    from {
+        transform: translate(-50px, 0px) rotate(360deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes right-animation {
+    from {
+        transform: translate(50px, 0px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes card-animation {
+    from {
+        transform: translate(-50px, 0px) scale(0.6);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+}
