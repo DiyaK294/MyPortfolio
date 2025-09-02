@@ -286,3 +286,10 @@ footer {
         opacity: 1;
     }
 }
+
+::selection {
+  background-color: red; /* Changes the background of selected text */
+  color: light-blue ; /* Changes the text color within the selection */
+}
+
+
