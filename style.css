@@ -288,8 +288,9 @@ footer {
 }
 
 ::selection {
-  background-color: red; /* Changes the background of selected text */
+  background-color: light-blue; /* Changes the background of selected text */
   color: light-blue ; /* Changes the text color within the selection */
 }
+
 
 
